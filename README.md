@@ -1,4 +1,4 @@
-# 📬 Autonomous Email Job Scheduler & Real-Time Outreach Platform
+#  Autonomous Email Job Scheduler & Real-Time Outreach Platform
 
 [![React 19](https://img.shields.io/badge/React-19.0-61dafb?style=flat-square&logo=react)](https://react.dev)
 [![Node.js](https://img.shields.io/badge/Node.js-18+-339933?style=flat-square&logo=node.js)](https://nodejs.org)
@@ -14,7 +14,7 @@ Supports **Dual-Engine Email Dispatch**: Native Google OAuth (Gmail REST API) fo
 
 ---
 
-## 📑 Table of Contents
+##  Table of Contents
 
 - [Features](#-features)
 - [Architecture & Workflow](#-architecture--workflow)
@@ -32,24 +32,24 @@ Supports **Dual-Engine Email Dispatch**: Native Google OAuth (Gmail REST API) fo
 
 ---
 
-## 🌟 Features
+##  Features
 
-### ⏱️ Reliable Email Scheduling & Queuing
+###  Reliable Email Scheduling & Queuing
 - **Custom Future Timestamps**: Schedule emails down to the exact minute across any timezone.
 - **Convenient Presets**: 1-click scheduling (+1 Hour, +4 Hours, Tomorrow Morning at 9:00 AM, Next Week).
 - **Persistent Job Storage**: Scheduled emails persist safely in durable storage (`/data/emails.json`), ensuring jobs survive server restarts.
 - **Cancel & 1-Click Retry**: Cancel scheduled emails before dispatch or instantly retry failed dispatches.
 
-### 🚀 Dual-Engine Delivery System
+###  Dual-Engine Delivery System
 - **Google OAuth (Gmail REST API)**: Direct RFC 2822 Base64-encoded dispatch via `https://gmail.googleapis.com/gmail/v1/users/me/messages/send`. Emails appear natively in the sender's authentic "Sent" mailbox.
 - **Custom SMTP & Gmail App Passwords**: Authenticate with standard SMTP credentials (host, port, SSL/TLS, username, password) or a 16-character Google App Password.
 - **Zero-Config Ethereal Fallback**: When no credentials are provided during testing, the server automatically provisions a temporary Ethereal test inbox with instant browser preview URLs.
 
-### 🛡️ Rate Limiting & Concurrency Control
+###  Rate Limiting & Concurrency Control
 - **Token Bucket Rate Limiter**: Configurable per-second dispatch limits (`RATE_LIMIT_PER_SEC=5`) to protect domain reputation and prevent anti-spam trigger flags.
 - **Controlled Concurrency**: Batch processing limit (`CONCURRENCY_LIMIT=2`) ensures predictable memory and network throughput.
 
-### 📊 Real-Time Analytics & Monitoring
+###  Real-Time Analytics & Monitoring
 - **Live Status Badges**: Real-time counts for **Scheduled**, **Sent**, and **Failed** dispatches.
 - **Failure Reason Recording**: Catches exact SMTP errors (e.g., `550 Invalid Recipient`, `535 Authentication Credentials Invalid`) and displays actionable remediation steps.
 - **Recent Recipients Auto-Fill**: Remembers previous contacts for rapid outreach composition.
@@ -57,7 +57,7 @@ Supports **Dual-Engine Email Dispatch**: Native Google OAuth (Gmail REST API) fo
 
 ---
 
-## 🏗️ Architecture & Workflow
+##  Architecture & Workflow
 
 ```text
 ┌────────────────────────────────────────────────────────┐
@@ -109,7 +109,7 @@ Supports **Dual-Engine Email Dispatch**: Native Google OAuth (Gmail REST API) fo
 
 ---
 
-## 🚀 Quick Start (Local Development)
+##  Quick Start (Local Development)
 
 ### 1. Prerequisites
 - **Node.js** 18.0.0 or higher
@@ -139,11 +139,11 @@ npm run dev
 
 Visit **`http://localhost:3000`** in your browser.
 
-> 💡 **Tip**: Even with zero configuration, the app runs out-of-the-box using the auto-provisioned **Ethereal Mailbox** simulator so you can test scheduling immediately!
+>  **Tip**: Even with zero configuration, the app runs out-of-the-box using the auto-provisioned **Ethereal Mailbox** simulator so you can test scheduling immediately!
 
 ---
 
-## ⚙️ Configuration & Environment Variables
+##  Configuration & Environment Variables
 
 All variables are optional. If omitted, default fallbacks and dynamic in-app user settings are used.
 
@@ -163,7 +163,7 @@ All variables are optional. If omitted, default fallbacks and dynamic in-app use
 
 ---
 
-## 🔑 How to Set Up Gmail & SMTP
+##  How to Set Up Gmail & SMTP
 
 To deliver emails directly to real recipient inboxes from your Gmail account:
 
@@ -191,7 +191,7 @@ You can connect SendGrid, Mailgun, Amazon SES, Postmark, or your own private mai
 
 ---
 
-## 📡 API Reference
+##  API Reference
 
 ### System & Diagnostics
 ```http
@@ -268,7 +268,7 @@ Verifies SMTP handshake against the mail server and returns `{ success: true }` 
 
 ---
 
-## 🚢 Production Deployment
+##  Production Deployment
 
 The project compiles the frontend into static assets and bundles the Express backend into a standalone, production-ready CommonJS file (`dist/server.cjs`).
 
@@ -315,7 +315,7 @@ gcloud run deploy email-job-scheduler \
 
 ---
 
-## ⚡ Background Worker & Rate Limiting
+## Background Worker & Rate Limiting
 
 The scheduler uses an internal, non-blocking asynchronous event loop:
 
@@ -329,7 +329,7 @@ The scheduler uses an internal, non-blocking asynchronous event loop:
 
 ---
 
-## ❓ Troubleshooting & FAQ
+##  Troubleshooting & FAQ
 
 #### 1. "Invalid login: 535-5.7.8 Username and Password not accepted"
 - **Cause**: Using your normal Google account password instead of an App Password, or 2-Step Verification is disabled.
@@ -348,6 +348,6 @@ The scheduler uses an internal, non-blocking asynchronous event loop:
 
 ---
 
-## 📄 License
+##  License
 
 This project is licensed under the [MIT License](LICENSE).
