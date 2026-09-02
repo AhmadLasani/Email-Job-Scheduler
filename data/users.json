@@ -1,0 +1,31 @@
+{
+  "user_1": {
+    "id": "user_1",
+    "name": "Adnan Ahmed",
+    "email": "manalitrip5454@gmail.com",
+    "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80",
+    "gmailConnected": true,
+    "gmailEmail": "manalitrip5454@gmail.com",
+    "isAuthenticated": false
+  },
+  "demo_user_01": {
+    "id": "demo_user_01",
+    "name": "Demo User",
+    "email": "demo@scheduler.io",
+    "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80",
+    "gmailConnected": true,
+    "gmailEmail": "demo@scheduler.io",
+    "gmailAppPassword": "",
+    "isAuthenticated": false
+  },
+  "RFXvGuYqXtYiLmk4gFhcR88hoMd2": {
+    "id": "RFXvGuYqXtYiLmk4gFhcR88hoMd2",
+    "name": "Manali1",
+    "email": "manalitrip5454@gmail.com",
+    "avatar": "https://lh3.googleusercontent.com/a/ACg8ocKCCJd43f1BFNNTn1polkTXOvc-PeML3vvYtbyfLELOywEMmQ=s96-c",
+    "gmailConnected": true,
+    "gmailEmail": "manalitrip5454@gmail.com",
+    "gmailAppPassword": "",
+    "isAuthenticated": true
+  }
+}

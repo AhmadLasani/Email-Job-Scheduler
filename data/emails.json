@@ -1,0 +1,70 @@
+[
+  {
+    "id": "email_1788372944821_f3jd",
+    "userId": "RFXvGuYqXtYiLmk4gFhcR88hoMd2",
+    "to": "ahmadlasani54@gmail.com",
+    "subject": "hi",
+    "body": "hello",
+    "status": "sent",
+    "scheduledFor": "2026-09-02T18:15:44.805Z",
+    "sentAt": "2026-09-02T18:15:44.805Z",
+    "timezone": "Asia/Kolkata",
+    "createdAt": "2026-09-02T18:15:44.821Z",
+    "senderEmail": "manalitrip5454@gmail.com",
+    "senderName": "Manali1"
+  },
+  {
+    "id": "email_1",
+    "userId": "user_1",
+    "to": "rahul@gmail.com",
+    "subject": "Meeting Reminder",
+    "body": "Hi Rahul,\n\nJust a quick reminder about our sync tomorrow to review the quarterly milestones.\n\nBest,\nAdnan",
+    "status": "scheduled",
+    "scheduledFor": "2026-09-03T05:59:34.695Z",
+    "timezone": "Asia/Kolkata",
+    "createdAt": "2026-09-02T17:59:34.696Z",
+    "senderEmail": "manalitrip5454@gmail.com",
+    "senderName": "Adnan Ahmed"
+  },
+  {
+    "id": "email_2",
+    "userId": "user_1",
+    "to": "manager@gmail.com",
+    "subject": "Project Update",
+    "body": "Hi,\n\nI wanted to share the latest update on the project. We have completed the core delivery schedule and verified all milestones.\n\nThanks,\nAdnan",
+    "status": "scheduled",
+    "scheduledFor": "2026-09-04T05:59:34.696Z",
+    "timezone": "Asia/Kolkata",
+    "createdAt": "2026-09-02T17:59:34.696Z",
+    "senderEmail": "manalitrip5454@gmail.com",
+    "senderName": "Adnan Ahmed"
+  },
+  {
+    "id": "email_3",
+    "userId": "user_1",
+    "to": "team@gmail.com",
+    "subject": "Sprint Kickoff Agenda",
+    "body": "Hi team,\n\nHere is the agenda for our upcoming sprint planning session. Please review items prior to the call.\n\nRegards,\nAdnan",
+    "status": "sent",
+    "scheduledFor": "2026-09-01T17:59:34.696Z",
+    "sentAt": "2026-09-01T17:59:34.696Z",
+    "timezone": "Asia/Kolkata",
+    "createdAt": "2026-08-31T17:59:34.696Z",
+    "senderEmail": "manalitrip5454@gmail.com",
+    "senderName": "Adnan Ahmed"
+  },
+  {
+    "id": "email_4",
+    "userId": "user_1",
+    "to": "client@company.com",
+    "subject": "Proposal Review Summary",
+    "body": "Hello,\n\nPlease find attached the final review document for the proposal.\n\nThanks,\nAdnan",
+    "status": "sent",
+    "scheduledFor": "2026-08-30T17:59:34.696Z",
+    "sentAt": "2026-08-30T17:59:34.696Z",
+    "timezone": "Asia/Kolkata",
+    "createdAt": "2026-08-29T17:59:34.696Z",
+    "senderEmail": "manalitrip5454@gmail.com",
+    "senderName": "Adnan Ahmed"
+  }
+]

@@ -1,0 +1,52 @@
+{
+  "entities": {
+    "User": {
+      "title": "User",
+      "description": "User profile with Gmail credentials and preferences",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string", "description": "User unique identifier" },
+        "email": { "type": "string", "format": "email", "description": "Google email address" },
+        "displayName": { "type": "string", "description": "Display name" },
+        "photoURL": { "type": "string", "description": "Avatar photo URL" },
+        "gmailAppPassword": { "type": "string", "description": "16-character Google App Password for SMTP dispatch" },
+        "gmailConnected": { "type": "boolean", "description": "Status of Gmail connection" },
+        "createdAt": { "type": "string", "description": "Account registration timestamp" },
+        "updatedAt": { "type": "string", "description": "Last credential or profile update timestamp" }
+      },
+      "required": ["uid", "email"]
+    },
+    "Email": {
+      "title": "Email",
+      "description": "Scheduled, sent, or failed email job scoped to the author user",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "Unique email record ID" },
+        "userId": { "type": "string", "description": "Firebase Auth UID of the creator" },
+        "senderEmail": { "type": "string", "format": "email", "description": "Sender Gmail address" },
+        "senderName": { "type": "string", "description": "Sender display name" },
+        "to": { "type": "string", "format": "email", "description": "Recipient email address" },
+        "subject": { "type": "string", "description": "Email subject title" },
+        "body": { "type": "string", "description": "Email message body content" },
+        "scheduledFor": { "type": "string", "description": "ISO timestamp for scheduled background delivery" },
+        "status": { "type": "string", "enum": ["scheduled", "sent", "failed", "cancelled"], "description": "Email processing state" },
+        "createdAt": { "type": "string", "description": "Creation timestamp" },
+        "sentAt": { "type": "string", "description": "Dispatch timestamp" },
+        "failedReason": { "type": "string", "description": "Failure reason if SMTP rejected" },
+        "etherealUrl": { "type": "string", "description": "Inspection URL if test mailbox used" },
+        "timezone": { "type": "string", "description": "Timezone selected by user" }
+      },
+      "required": ["id", "userId", "to", "subject", "status"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": { "$ref": "#/entities/User" },
+      "description": "User profiles and credentials isolated per authenticated user"
+    },
+    "/emails/{emailId}": {
+      "schema": { "$ref": "#/entities/Email" },
+      "description": "Individual email jobs and history scoped strictly to the authoring userId"
+    }
+  }
+}
